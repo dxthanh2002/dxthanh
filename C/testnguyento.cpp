@@ -1,13 +1,19 @@
 #include<stdio.h>
 bool kT(int n){
-	int c;
-	for(int i=2;i<n;i++){
+	if(n<2){
+		return false;
+	}
+	int dem =0;
+	for(int i=1;i<=n;i++){
 		if(n%i==0){
-			c++;
+			dem++;
 		}
 	}
-	if(c==0)
-	return true;
+	if(dem==2){
+		return true;
+	}else{
+		return false;
+	}
 }
 int main(){
 int x;
